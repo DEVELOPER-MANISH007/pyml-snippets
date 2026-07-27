@@ -184,6 +184,12 @@ Done ✅
 
 # 📦 Installation
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/DevManish007.pyml-snippets?label=VS%20Marketplace&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=DevManish007.pyml-snippets)
+
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/DevManish007.pyml-snippets?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=DevManish007.pyml-snippets)
+
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/DevManish007.pyml-snippets)](https://marketplace.visualstudio.com/items?itemName=DevManish007.pyml-snippets)
+
 ## From VS Code Marketplace
 
 1. Open Extensions
