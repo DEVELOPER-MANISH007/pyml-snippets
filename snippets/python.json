@@ -1,0 +1,525 @@
+{
+    "Train Test Split": {
+        "prefix": "tts",
+        "body": [
+            "from sklearn.model_selection import train_test_split",
+            "",
+            "X_train, X_test, y_train, y_test = train_test_split(",
+            "    X, y, test_size=0.2, random_state=42",
+            ")"
+        ],
+        "description": "Train Test Split"
+    },
+	"Standard Scaler": {
+		"prefix": "scaler",
+		"body": [
+			"from sklearn.preprocessing import StandardScaler",
+			"",
+			"scaler = StandardScaler()",
+			"X_scaled = scaler.fit_transform(X)"
+		],
+		"description": "Standard Scaler"
+	},
+	"Min Max Scaler": {
+		"prefix": "minmax",
+		"body": [
+			"from sklearn.preprocessing import MinMaxScaler",
+			"",
+			"scaler = MinMaxScaler()",
+			"X_scaled = scaler.fit_transform(X)"
+		],
+		"description": "Min Max Scaler"
+	},
+	"One Hot Encoding": {
+		"prefix": "one",
+		"body": [
+			"from sklearn.preprocessing import OneHotEncoder",
+			"",
+			"encoder = OneHotEncoder(sparse=False)",
+			"X_encoded = encoder.fit_transform(X)"
+		],
+		"description": "One Hot Encoding"
+	},
+	"Label Encoding": {
+		"prefix": "label",
+		"body": [
+			"from sklearn.preprocessing import LabelEncoder",
+			"",
+			"encoder = LabelEncoder()",
+			"y_encoded = encoder.fit_transform(y)"
+		],
+		"description": "Label Encoding"
+	},
+	"Data Science Imports": {
+        "prefix": "npm",
+        "body": [
+            "import numpy as np",
+            "import pandas as pd",
+            "import matplotlib.pyplot as plt",
+            "import seaborn as sns",
+            "",
+            "%matplotlib inline"
+        ],
+        "description": "Import NumPy, Pandas, Matplotlib and Seaborn"
+    },
+	 "Classification Metrics": {
+        "prefix": "metrics",
+        "body": [
+            "from sklearn.metrics import accuracy_score, confusion_matrix, classification_report",
+            "",
+            "print(confusion_matrix(y_test, y_pred))",
+            "print(accuracy_score(y_test, y_pred))",
+            "print(classification_report(y_test, y_pred))"
+        ],
+        "description": "Import and print classification metrics"
+    },
+	"Make Regression Dataset": {
+    "prefix": "makereg",
+    "body": [
+        "from sklearn.datasets import make_regression",
+        "",
+        "X, y = make_regression(",
+        "    n_samples=1000,",
+        "    n_features=10,",
+        "    n_informative=8,",
+        "    noise=25,",
+        "    random_state=42",
+        ")"
+    ],
+    "description": "Create Regression Dataset"
+},
+"Classification Evaluation": {
+    "prefix": "clfevl",
+    "body": [
+        "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report",
+        "",
+        "print('Accuracy :', accuracy_score(y_test, y_pred))",
+        "print('Precision:', precision_score(y_test, y_pred))",
+        "print('Recall   :', recall_score(y_test, y_pred))",
+        "print('F1 Score :', f1_score(y_test, y_pred))",
+        "",
+        "print('\\nConfusion Matrix')",
+        "print(confusion_matrix(y_test, y_pred))",
+        "",
+        "print('\\nClassification Report')",
+        "print(classification_report(y_test, y_pred))"
+    ],
+    "description": "Complete Classification Evaluation"
+},
+"Pipeline": {
+    "prefix": "pipeline",
+    "body": [
+        "from sklearn.pipeline import Pipeline",
+        "from sklearn.preprocessing import StandardScaler",
+        "",
+        "pipe = Pipeline([",
+        "    ('scaler', StandardScaler()),",
+        "    ('model', ${1:LinearRegression()}),",
+        "])",
+        "",
+        "pipe.fit(X_train, y_train)",
+        "y_pred = pipe.predict(X_test)"
+    ],
+    "description": "Pipeline with StandardScaler"
+},
+"Regression Evaluation": {
+    "prefix": "regeval",
+    "body": [
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score",
+        "import numpy as np",
+        "",
+        "print('MAE      :', mean_absolute_error(y_test, y_pred))",
+        "print('MSE      :', mean_squared_error(y_test, y_pred))",
+        "print('RMSE     :', np.sqrt(mean_squared_error(y_test, y_pred)))",
+        "print('R2 Score :', r2_score(y_test, y_pred))"
+    ],
+    "description": "Regression Evaluation Metrics"
+},
+"Train and Predict": {
+    "prefix": "fitpred",
+    "body": [
+        "model.fit(X_train, y_train)",
+        "y_pred = model.predict(X_test)"
+    ],
+    "description": "Fit model and predict"
+},
+"Make Classification Dataset": {
+    "prefix": "makeclf",
+    "body": [
+        "from sklearn.datasets import make_classification",
+        "",
+        "X, y = make_classification(",
+        "    n_samples=${1:1000},",
+        "    n_features=${2:20},",
+        "    n_informative=${3:15},",
+        "    n_redundant=${4:5},",
+        "    n_classes=${5:2},",
+        "    random_state=${6:42}",
+        ")"
+    ],
+    "description": "Create Classification Dataset"
+},
+"Binary Classification Dataset": {
+    "prefix": "binaryclf",
+    "body": [
+        "from sklearn.datasets import make_classification",
+        "",
+        "X, y = make_classification(",
+        "    n_samples=1000,",
+        "    n_features=10,",
+        "    n_informative=8,",
+        "    n_redundant=2,",
+        "    n_classes=2,",
+        "    random_state=42",
+        ")"
+    ],
+    "description": "Binary Classification Dataset"
+},"Imbalanced Classification Dataset": {
+    "prefix": "imbclf",
+    "body": [
+        "from sklearn.datasets import make_classification",
+        "",
+        "X, y = make_classification(",
+        "    n_samples=1000,",
+        "    n_features=10,",
+        "    n_informative=8,",
+        "    n_redundant=2,",
+        "    n_classes=2,",
+        "    weights=[0.9, 0.1],",
+        "    random_state=42",
+        ")"
+    ],
+    "description": "Imbalanced Classification Dataset"
+},
+"GridSearchCV": {
+    "prefix": "grid",
+    "body": [
+        "from sklearn.model_selection import GridSearchCV",
+        "",
+        "params = {",
+        "    '${1:parameter_name}': ${2:[value1, value2, value3]}",
+        "}",
+        "",
+        "grid = GridSearchCV(",
+        "    estimator=${3:model},",
+        "    param_grid=params,",
+        "    cv=${4:5},",
+        "    scoring='${5:accuracy}',",
+        "    n_jobs=-1",
+        ")",
+        "",
+        "grid.fit(X_train, y_train)",
+        "",
+        "print('Best Parameters :', grid.best_params_)",
+        "print('Best Score      :', grid.best_score_)",
+        "",
+        "best_model = grid.best_estimator_",
+        "y_pred = best_model.predict(X_test)"
+    ],
+    "description": "GridSearchCV Template"
+},
+"Compare Classification Models": {
+    "prefix": "compareclf",
+    "body": [
+        "from sklearn.linear_model import LogisticRegression",
+        "from sklearn.neighbors import KNeighborsClassifier",
+        "from sklearn.svm import SVC",
+        "from sklearn.tree import DecisionTreeClassifier",
+        "from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, AdaBoostClassifier, GradientBoostingClassifier",
+        "from sklearn.naive_bayes import GaussianNB",
+        "from sklearn.discriminant_analysis import LinearDiscriminantAnalysis",
+        "from sklearn.metrics import accuracy_score",
+        "",
+        "models = {",
+        "    'Logistic Regression': LogisticRegression(),",
+        "    'KNN': KNeighborsClassifier(),",
+        "    'SVM': SVC(),",
+        "    'Decision Tree': DecisionTreeClassifier(random_state=42),",
+        "    'Random Forest': RandomForestClassifier(random_state=42),",
+        "    'Extra Trees': ExtraTreesClassifier(random_state=42),",
+        "    'AdaBoost': AdaBoostClassifier(random_state=42),",
+        "    'Gradient Boosting': GradientBoostingClassifier(random_state=42),",
+        "    'GaussianNB': GaussianNB(),",
+        "    'LDA': LinearDiscriminantAnalysis()",
+        "}",
+        "",
+        "for name, model in models.items():",
+        "    model.fit(X_train, y_train)",
+        "    y_pred = model.predict(X_test)",
+        "    print(f'{name:<22} : {accuracy_score(y_test, y_pred):.4f}')"
+    ],
+    "description": "Compare Multiple Classification Models"
+},
+"ColumnTransformer OneHotEncoder": {
+    "prefix": "ctonehot",
+    "body": [
+        "from sklearn.compose import ColumnTransformer",
+        "from sklearn.preprocessing import OneHotEncoder",
+        "",
+        "ct = ColumnTransformer(",
+        "    transformers=[",
+        "        ('onehot', OneHotEncoder(drop='first'), [${1:0}])",
+        "    ],",
+        "    remainder='passthrough'",
+        ")",
+        "",
+        "X = ct.fit_transform(X)"
+    ],
+    "description": "ColumnTransformer with OneHotEncoder"
+},
+"GaussianNB Import": {
+    "prefix": "gaussian",
+    "body": [
+        "from sklearn.naive_bayes import GaussianNB"
+    ],
+    "description": "Import GaussianNB"
+},
+"Logistic Regression Import": {
+    "prefix": "logistic",
+    "body": [
+        "from sklearn.linear_model import LogisticRegression"
+    ],
+    "description": "Import Logistic Regression"
+},
+"KNN Import": {
+    "prefix": "knn",
+    "body": [
+        "from sklearn.neighbors import KNeighborsClassifier"
+    ],
+    "description": "Import KNN"
+},
+"SVC Import": {
+    "prefix": "svc",
+    "body": [
+        "from sklearn.svm import SVC"
+    ],
+    "description": "Import SVC"
+},
+"Random Forest Import": {
+    "prefix": "rfc",
+    "body": [
+        "from sklearn.ensemble import RandomForestClassifier"
+    ],
+    "description": "Import Random Forest"
+},
+"Linear Regression Import": {
+    "prefix": "linear",
+    "body": [
+        "from sklearn.linear_model import LinearRegression"
+    ]
+},
+"Ridge Import": {
+    "prefix": "ridge",
+    "body": [
+        "from sklearn.linear_model import Ridge"
+    ]
+},
+"Lasso Import": {
+    "prefix": "lasso",
+    "body": [
+        "from sklearn.linear_model import Lasso"
+    ]
+},
+"ElasticNet Import": {
+    "prefix": "elastic",
+    "body": [
+        "from sklearn.linear_model import ElasticNet"
+    ]
+},
+"Decision Tree Classifier": {
+    "prefix": "dt",
+    "body": [
+        "from sklearn.tree import DecisionTreeClassifier"
+    ]
+},
+"Decision Tree Regressor": {
+    "prefix": "dtr",
+    "body": [
+        "from sklearn.tree import DecisionTreeRegressor"
+    ]
+},
+"Extra Trees": {
+    "prefix": "extra",
+    "body": [
+        "from sklearn.ensemble import ExtraTreesClassifier"
+    ]
+},
+"AdaBoost": {
+    "prefix": "ada",
+    "body": [
+        "from sklearn.ensemble import AdaBoostClassifier"
+    ]
+},
+"Gradient Boosting": {
+    "prefix": "gb",
+    "body": [
+        "from sklearn.ensemble import GradientBoostingClassifier"
+    ]
+},
+"Hist Gradient Boosting": {
+    "prefix": "histgb",
+    "body": [
+        "from sklearn.ensemble import HistGradientBoostingClassifier"
+    ]
+},
+"EDA Summary": {
+    "prefix": "eda",
+    "body": [
+        "from IPython.display import display",
+        "import pandas as pd",
+        "",
+        "print('='*60)",
+        "print('📊 EXPLORATORY DATA ANALYSIS (EDA) SUMMARY')",
+        "print('='*60)",
+        "",
+        "print('\\n📌 Dataset Shape')",
+        "print(df.shape)",
+        "",
+        "print('\\n📌 First 5 Rows')",
+        "display(df.head())",
+        "",
+        "print('\\n📌 Last 5 Rows')",
+        "display(df.tail())",
+        "",
+        "print('\\n📌 Random Sample')",
+        "display(df.sample(5))",
+        "",
+        "print('\\n📌 Column Names')",
+        "display(pd.DataFrame(df.columns, columns=['Columns']))",
+        "",
+        "print('\\n📌 Data Types')",
+        "display(df.dtypes.to_frame('Data Type'))",
+        "",
+        "print('\\n📌 Dataset Information')",
+        "df.info()",
+        "",
+        "print('\\n📌 Missing Values')",
+        "display(df.isnull().sum().to_frame('Missing Values'))",
+        "",
+        "print('\\n📌 Duplicate Rows')",
+        "print(df.duplicated().sum())",
+        "",
+        "print('\\n📌 Numerical Summary')",
+        "display(df.describe().T)",
+        "",
+        "print('\\n📌 Categorical Summary')",
+        "display(df.describe(include='object').T)",
+        "",
+        "print('\\n📌 Correlation Matrix')",
+        "display(df.corr(numeric_only=True))",
+        "",
+        "print('\\n✅ EDA Completed Successfully!')"
+    ],
+    "description": "Professional EDA Summary"
+},
+"EDA Visualization": {
+    "prefix": "edaplot",
+    "body": [
+        "import matplotlib.pyplot as plt",
+        "import seaborn as sns",
+        "",
+        "plt.figure(figsize=(10,6))",
+        "sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='coolwarm')",
+        "plt.title('Correlation Heatmap')",
+        "plt.show()"
+    ],
+    "description": "EDA Correlation Heatmap"
+},
+"Quick EDA": {
+    "prefix": "edashort",
+    "body": [
+        "display(df.head())",
+        "display(df.sample(5))",
+        "display(df.info())",
+        "display(df.describe())",
+        "display(df.isnull().sum())"
+    ],
+    "description": "Quick EDA"
+},
+"Read CSV": {
+    "prefix": "csv",
+    "body": [
+        "import pandas as pd",
+        "",
+        "df = pd.read_csv('${1:file.csv}')",
+        "df.head()"
+    ],
+    "description": "Read CSV File"
+},
+"Correlation Heatmap": {
+    "prefix": "heat",
+    "body": [
+        "plt.figure(figsize=(10,8))",
+        "sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='coolwarm')",
+        "plt.title('Correlation Heatmap')",
+        "plt.show()"
+    ],
+    "description": "Correlation Heatmap"
+},
+"Histogram": {
+    "prefix": "hist",
+    "body": [
+        "plt.figure(figsize=(8,5))",
+        "sns.histplot(df['${1:column}'], kde=True)",
+        "plt.title('${1:column}')",
+        "plt.show()"
+    ],
+    "description": "Histogram with KDE"
+},
+"Scatter Plot": {
+    "prefix": "scatter",
+    "body": [
+        "plt.figure(figsize=(8,5))",
+        "sns.scatterplot(x=df['${1:x}'], y=df['${2:y}'])",
+        "plt.show()"
+    ],
+    "description": "Scatter Plot"
+},
+"Count Plot": {
+    "prefix": "count",
+    "body": [
+        "plt.figure(figsize=(8,5))",
+        "sns.countplot(x=df['${1:column}'])",
+        "plt.xticks(rotation=45)",
+        "plt.show()"
+    ],
+    "description": "Count Plot"
+},
+"Compare Regression Models": {
+    "prefix": "comparereg",
+    "body": [
+        "from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet",
+        "from sklearn.neighbors import KNeighborsRegressor",
+        "from sklearn.svm import SVR",
+        "from sklearn.tree import DecisionTreeRegressor",
+        "from sklearn.ensemble import RandomForestRegressor, ExtraTreesRegressor, AdaBoostRegressor, GradientBoostingRegressor",
+        "from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error",
+        "import numpy as np",
+        "",
+        "models = {",
+        "    'Linear Regression': LinearRegression(),",
+        "    'Ridge': Ridge(),",
+        "    'Lasso': Lasso(),",
+        "    'ElasticNet': ElasticNet(),",
+        "    'KNN': KNeighborsRegressor(),",
+        "    'SVR': SVR(),",
+        "    'Decision Tree': DecisionTreeRegressor(random_state=42),",
+        "    'Random Forest': RandomForestRegressor(random_state=42),",
+        "    'Extra Trees': ExtraTreesRegressor(random_state=42),",
+        "    'AdaBoost': AdaBoostRegressor(random_state=42),",
+        "    'Gradient Boosting': GradientBoostingRegressor(random_state=42)",
+        "}",
+        "",
+        "for name, model in models.items():",
+        "    model.fit(X_train, y_train)",
+        "    y_pred = model.predict(X_test)",
+        "",
+        "    print(f'\\n{name}')",
+        "    print('-' * 40)",
+        "    print(f'R2 Score : {r2_score(y_test, y_pred):.4f}')",
+        "    print(f'MAE      : {mean_absolute_error(y_test, y_pred):.4f}')",
+        "    print(f'RMSE     : {np.sqrt(mean_squared_error(y_test, y_pred)):.4f}')"
+    ],
+    "description": "Compare Multiple Regression Models"
+}
+}

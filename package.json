@@ -1,0 +1,71 @@
+{
+  "name": "pyml-snippets",
+  "displayName": "PyML Snippets",
+  "description": "Boost your Python, Data Science & Machine Learning workflow with 42+ ready-to-use VS Code snippets for EDA, preprocessing, model evaluation, visualization, and more.",
+  "version": "1.0.0",
+  "publisher": "DevManish",
+  "license": "MIT",
+  "preview": false,
+
+  "author": {
+    "name": "Dev_Manish",
+    "url": "https://github.com/Developer-Manish007"
+  },
+
+  "homepage": "https://github.com/Developer-Manish007/pyml-snippets",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Developer-Manish007/pyml-snippets.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/Developer-Manish007/pyml-snippets/issues"
+  },
+
+  "icon": "icon.png",
+
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+
+  "extensionKind": [
+    "workspace"
+  ],
+
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+
+  "keywords": [
+    "python",
+    "python snippets",
+    "machine learning",
+    "data science",
+    "ai",
+    "eda",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "sklearn",
+    "visualization",
+    "productivity",
+    "vscode snippets",
+    "python extension"
+  ],
+
+  "galleryBanner": {
+    "color": "#0F172A",
+    "theme": "dark"
+  },
+
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/python.json"
+      }
+    ]
+  }
+}
