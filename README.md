@@ -250,10 +250,15 @@ https://github.com/Developer-Manish007
 
 ---
 
+---
+
 # 📄 License
 
-MIT License
+This project is licensed under the **MIT License**.
 
+Copyright (c) 2026 Dev_Manish
+
+See the [LICENSE](LICENSE) file for the complete license terms.
 ---
 
 <div align="center">
