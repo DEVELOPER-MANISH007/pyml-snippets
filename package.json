@@ -2,7 +2,7 @@
   "name": "pyml-snippets",
   "displayName": "PyML Snippets",
   "description": "Boost your Python, Data Science & Machine Learning workflow with 42+ ready-to-use VS Code snippets for EDA, preprocessing, model evaluation, visualization, and more.",
-  "version": "1.0.0",
+  "version":  "1.1.0",
   "publisher": "DevManish007",
   "license": "MIT",
   "preview": false,
