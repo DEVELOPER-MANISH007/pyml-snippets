@@ -6,7 +6,7 @@
 
 ### Supercharge your Python, Data Science & Machine Learning Workflow
 
-Write cleaner code, save time, and boost productivity with **42+ ready-to-use Visual Studio Code snippets** for Python, Data Science, Machine Learning, EDA, Data Preprocessing, Visualization, and Model Evaluation.
+Write cleaner code, save time, and boost productivity with **54 ready-to-use Visual Studio Code snippets** for Python, Data Science, Machine Learning, EDA, Data Preprocessing, Visualization, Model Evaluation, and NLP.
 
 <p align="center">
 
@@ -35,7 +35,7 @@ Instead of writing repetitive boilerplate code, simply type a short prefix and p
 
 # ✨ Features
 
-- 🚀 42+ Production-ready snippets
+- 🚀 54 production-ready snippets
 - 🐍 Python development snippets
 - 📊 Data Science utilities
 - 🤖 Machine Learning models
@@ -43,6 +43,9 @@ Instead of writing repetitive boilerplate code, simply type a short prefix and p
 - 🧹 Data preprocessing
 - 📉 Visualization snippets
 - 🎯 Model evaluation
+- 📝 NLP and text processing workflows
+- 🔤 Text vectorization and Word2Vec
+- 📌 Outlier detection with IQR
 - ⚡ Train/Test Split
 - 🔍 GridSearchCV
 - 🔄 ML Pipelines
@@ -109,48 +112,60 @@ Done ✅
 
 | Prefix | Description |
 |---------|-------------|
-| npm | Common Python Imports |
-| csv | Read CSV |
 | tts | Train Test Split |
-| scaler | StandardScaler |
-| minmax | MinMaxScaler |
+| scaler | Standard Scaler |
+| minmax | Min Max Scaler |
 | one | One Hot Encoding |
 | label | Label Encoding |
-| metrics | Classification Metrics |
-| clfevl | Classification Evaluation |
-| regeval | Regression Evaluation |
-| fitpred | Train & Predict |
-| pipeline | Pipeline |
-| grid | GridSearchCV |
-| compareclf | Compare Classifiers |
-| comparereg | Compare Regressors |
-| makeclf | Classification Dataset |
-| makereg | Regression Dataset |
-| binaryclf | Binary Dataset |
-| imbclf | Imbalanced Dataset |
-| ctonehot | ColumnTransformer |
-| gaussian | GaussianNB |
-| logistic | Logistic Regression |
-| knn | KNN |
-| svc | Support Vector Machine |
-| rfc | Random Forest |
+| npm | Import NumPy, Pandas, Matplotlib and Seaborn |
+| metrics | Import and print classification metrics |
+| makereg | Create Regression Dataset |
+| clfevl | Complete Classification Evaluation |
+| pipeline | Pipeline with StandardScaler |
+| regeval | Regression Evaluation Metrics |
+| fitpred | Fit model and predict |
+| makeclf | Create Classification Dataset |
+| binaryclf | Binary Classification Dataset |
+| imbclf | Imbalanced Classification Dataset |
+| grid | GridSearchCV Template |
+| compareclf | Compare Multiple Classification Models |
+| ctonehot | ColumnTransformer with OneHotEncoder |
+| gaussian | Import GaussianNB |
+| logistic | Import Logistic Regression |
+| knn | Import KNN |
+| svc | Import SVC |
+| rfc | Import Random Forest |
+| linear | Linear Regression Import |
+| ridge | Ridge Import |
+| lasso | Lasso Import |
+| elastic | ElasticNet Import |
 | dt | Decision Tree Classifier |
 | dtr | Decision Tree Regressor |
-| linear | Linear Regression |
-| ridge | Ridge Regression |
-| lasso | Lasso Regression |
-| elastic | ElasticNet |
 | extra | Extra Trees |
 | ada | AdaBoost |
 | gb | Gradient Boosting |
-| histgb | HistGradientBoosting |
-| eda | Complete EDA |
+| histgb | Hist Gradient Boosting |
+| eda | Professional EDA Summary |
+| edaplot | EDA Correlation Heatmap |
 | edashort | Quick EDA |
-| edaplot | EDA Visualization |
+| csv | Read CSV File |
 | heat | Correlation Heatmap |
-| hist | Histogram |
+| hist | Histogram with KDE |
 | scatter | Scatter Plot |
 | count | Count Plot |
+| comparereg | Compare Multiple Regression Models |
+| nlp-remove | Complete NLP text cleaning with stopword, URL, HTML tag, and extra space removal |
+| lemmatize | Apply lemmatization to a text column using WordNetLemmatizer |
+| bagof | Convert text data into Bag of Words representation |
+| countvector | Convert text into a numerical matrix using CountVectorizer |
+| nlp-corpus | Clean, lowercase, tokenize, remove stopwords, and lemmatize text into a corpus |
+| nlp-word2vec | Train and use a Word2Vec model with vocabulary, word vectors, similarity, and similar words |
+| nlp-word2vec-google | Load Google's pretrained Word2Vec model and perform word vectors, similarity, and vocabulary operations |
+| column-transformer | Create a ColumnTransformer for numerical and categorical features |
+| tfidf | Convert text into TF-IDF features with configurable n-grams and frequency thresholds |
+| remove-outlier | Detect and remove outliers from a numerical column using the IQR method |
+| outlier | Detect outliers in a numerical column using the IQR method |
+| nlp-text-classification | Complete NLP text classification workflow using TF-IDF and Logistic Regression |
 
 ---
 
